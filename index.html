@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+     <title>Document</title>
+</head>
+<body>
+<section>
+     <a href="">LOGO</a>
+</section>     
+<header>
+     <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>    
+     </ul>
+</header>
+<section class="icon"><span class="fa fa-bars"></span></section>
+<div class="owl-carousel owl-theme" style="z-index: 1000;">
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?nature"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?animals"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?trees"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?forests"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?sunset"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?deserts"></div>
+     <div style="width:100vw; height:90vh; margin: 0 auto;"><img src="https://source.unsplash.com/1500x700/?mountains"></div>
+
+</div>     
+
+<script src="js/jquery-3.6.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+     $(document).ready(function(){
+          $(".owl-carousel").owlCarousel({
+               loop:true,
+               autoplay:true,
+               autoplayTimeout: 5000,
+
+               
+               responsiveClass:true,
+               responsive:{
+               0:{
+                    items:1,
+                    nav:true
+               },
+               600:{
+                    items:1,
+                    nav:true
+               },
+               1000:{
+                    items:1,
+                    nav:true,
+                    loop:true
+               }
+    }
+          });
+          $('a').mouseenter(function(){
+               $(this).addClass('active');
+          });
+          $('a').mouseleave(function(){
+               $(this).removeClass('active')
+          });
+          $('.icon').click(function(){
+               $('header').slideToggle();
+
+          });
+     });
+</script>
+</body>
+</html>
